@@ -132,10 +132,10 @@ function draw () {
 
       if(bricks_status[r][c]===true)
         {
-          if((ball_x<x+brick_width) &&
-              (ball_x>x) &&
-              (ball_y<y+(brick_height / 2))  &&
-              (ball_y>y))
+          if((ball_x-(ball_diameter/2)<x+brick_width) &&
+              (ball_x+ball_diameter>x) &&
+              (ball_y<y+brick_height )  &&
+              (ball_y+ball_diameter>y))
           {
             score+=scores[c];
             bricks_status[r][c]=false;
